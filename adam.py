@@ -19,7 +19,8 @@ import paho.mqtt.publish as publish
 
 client = mqtt.Client()
 # quat = 1.0, 0.0, 0.0, 0.0
-global data, msg_mqtt
+global data, msg_mqtt, client_obj
+counter = 0
 
 
 def on_connect(client, userdata, flags, rc):
@@ -32,11 +33,16 @@ def on_message(client, userdata, msg):
     data = struct.unpack('ffff', msg.payload)
     msg_mqtt = msg.topic.split('/')
     # print(msg_mqtt, data)
-    mqtt_data() # <<<<????
+    # mqtt_data()  # <<<<????
+
+counter = 0
 
 
 def mqtt_data():
     global data, msg_mqtt
+
+    global counter
+    counter += 1
 
     qw, qx, qy, qz = [float(s) for s in data]
     arma_mqtt, bone_mqtt = [s for s in msg_mqtt]
@@ -54,12 +60,24 @@ def mqtt_data():
 
     pose_bone.keyframe_insert('rotation_quaternion', frame=23)
 
+    if counter == 10:
+        return None
+    return 0.1
+
 
 def mqtt_connect(hostname, port):
-    client.connect(host=hostname, port=port, keepalive=60)
-    client.on_connect = on_connect
-    client.on_message = on_message
-    client.loop_start()
+    client_obj.connect(host=hostname, port=port, keepalive=60)
+    client_obj.on_connect = on_connect
+    client_obj.on_message = on_message
+    client_obj.loop_start()
+
+    bpy.app.timers.register(mqtt_data)
+
+
+def mqtt_disconnect():
+    bpy.app.timers.unregister(mqtt_data)
+    client_obj.loop_stop()
+
 
 
 def mqtt_start(hostname, port):
@@ -85,6 +103,7 @@ class BaseOperator(bpy.types.Operator):
     port = 1883
 
     functions_mapping = {
+        "mqtt_disconnect": mqtt_disconnect,
         "mqtt_connect": mqtt_connect,
         "mqtt_start": mqtt_start,
         "mqtt_stop": mqtt_stop,
@@ -95,6 +114,8 @@ class BaseOperator(bpy.types.Operator):
         func = self.functions_mapping.get(self.bl_label)
         if func:
             func(self.hostname, self.port)
+        else:
+            print(f"ERROR: function {self.bl_label} not found")
 
         return {'FINISHED'}
 
@@ -129,6 +150,11 @@ class MQTTConnectOp(BaseOperator):
     bl_label = "mqtt_connect"
 
 
+class MQTTDisconnectOp(BaseOperator):
+    bl_idname = "object.mqtt_disconnect"
+    bl_label = "mqtt_disconnect"
+
+
 class MQTTCalibOp(BaseOperator):
     bl_idname = "object.mqtt_calib"
     bl_label = "mqtt_calib"
@@ -147,6 +173,7 @@ class MQTTPanel(bpy.types.Panel):
         layout.operator("object.mqtt_start", text="start")
         layout.operator("object.mqtt_stop", text="stop")
         layout.operator("object.mqtt_connect", text="connect")
+        layout.operator("object.mqtt_disconnect", text="disconnect")
         layout.operator("object.mqtt_calib", text="calibrate")
 
 
@@ -155,15 +182,17 @@ def register():
     bpy.utils.register_class(MQTTStopOp)
     bpy.utils.register_class(MQTTCalibOp)
     bpy.utils.register_class(MQTTConnectOp)
+    bpy.utils.register_class(MQTTDisconnectOp)
     bpy.utils.register_class(MQTTPanel)
 
 
 def unregister():
+    bpy.utils.unregister_class(MQTTPanel)
     bpy.utils.unregister_class(MQTTStartOp)
     bpy.utils.unregister_class(MQTTStopOp)
     bpy.utils.unregister_class(MQTTCalibOp)
     bpy.utils.unregister_class(MQTTConnectOp)
-    bpy.utils.unregister_class(MQTTPanel)
+    bpy.utils.unregister_class(MQTTDisconnectOp)
 
 
 if __name__ == "__main__":
