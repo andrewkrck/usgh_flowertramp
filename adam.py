@@ -32,7 +32,7 @@ def on_message(client, userdata, msg):
     data = struct.unpack('ffff', msg.payload)
     msg_mqtt = msg.topic.split('/')
     # print(msg_mqtt, data)
-    # mqtt_data() # <<<<????
+    mqtt_data() # <<<<????
 
 
 def mqtt_data():
@@ -40,20 +40,19 @@ def mqtt_data():
 
     qw, qx, qy, qz = [float(s) for s in data]
     arma_mqtt, bone_mqtt = [s for s in msg_mqtt]
-    print(qw, qx, qy, qz)
+
+    # print(arma_mqtt, bone_mqtt)
+    # print(qw, qx, qy, qz)
 
     quat = mathutils.Quaternion((qw, qx, qy, qz))
 
-    # scene = bge.logic.getCurrentScene()
-    scene = freestyle.utils.getCurrentScene()
+    arma = bpy.data.objects[arma_mqtt]
 
-    # cont = bge.logic.getCurrentController()
+    pose_bone = arma.pose.bones[bone_mqtt]
 
-    arma = scene.objects[arma_mqtt]
+    pose_bone.rotation_quaternion = quat
 
-    bone = arma.channels[bone_mqtt]
-    bone.rotation_quaternion = quat
-    arma.update()
+    pose_bone.keyframe_insert('rotation_quaternion', frame=23)
 
 
 def mqtt_connect(hostname, port):
