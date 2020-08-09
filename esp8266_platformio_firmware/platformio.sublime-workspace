@@ -1,0 +1,727 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"q_p",
+				"q_pelvis"
+			],
+			[
+				"q_c",
+				"q_corr_conj"
+			],
+			[
+				"q_co",
+				"q_corr"
+			],
+			[
+				"q_",
+				"q_upperarm_l"
+			],
+			[
+				"q_u",
+				"q_upperarm_l"
+			],
+			[
+				"get",
+				"getConjugate"
+			],
+			[
+				"ge",
+				"getProduct"
+			],
+			[
+				"q",
+				"q_out"
+			],
+			[
+				"co",
+				"count"
+			],
+			[
+				"q_he",
+				"q_head_conj"
+			],
+			[
+				"curr",
+				"curr_time"
+			],
+			[
+				"un",
+				"unsigned"
+			],
+			[
+				"cli",
+				"clientOut"
+			],
+			[
+				"cl",
+				"clientIn"
+			],
+			[
+				"clientI",
+				"clientIn"
+			],
+			[
+				"q_h",
+				"q_head"
+			],
+			[
+				"q_f",
+				"q_foot_r_conj"
+			],
+			[
+				"q_t",
+				"q_thigh_r"
+			],
+			[
+				"q_s",
+				"q_spine"
+			],
+			[
+				"Pr",
+				"println"
+			],
+			[
+				"mes",
+				"messageMQTT"
+			],
+			[
+				"Get",
+				"getProduct"
+			],
+			[
+				"H",
+				"HIGH"
+			],
+			[
+				"sen",
+				"sendData"
+			],
+			[
+				"p",
+				"println"
+			],
+			[
+				"re",
+				"return"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/kharlashkin/Develop/mqtt/subscribe_simple.py",
+			"settings":
+			{
+				"buffer_size": 1030,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/kharlashkin/Develop/mqtt/calib.py",
+			"settings":
+			{
+				"buffer_size": 684,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main.cpp",
+			"settings":
+			{
+				"buffer_size": 8603,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "int led = 13;"
+			}
+		},
+		{
+			"file": "/home/kharlashkin/Develop/mqtt/start.py",
+			"settings":
+			{
+				"buffer_size": 684,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "platformio.ini",
+			"settings":
+			{
+				"buffer_size": 1112,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/MPU9250_9Axis_MotionApps41.h",
+			"settings":
+			{
+				"buffer_size": 48892,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/MPU9250.cpp",
+			"settings":
+			{
+				"buffer_size": 126954,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/helper_3dmath.h",
+			"settings":
+			{
+				"buffer_size": 7379,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "PlatformIO",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"PlatformIO",
+					""
+				],
+				[
+					"PlatformIO",
+					"Build"
+				],
+				[
+					"PlatformIO",
+					"Upload"
+				],
+				[
+					"PlatformIO",
+					"Clean"
+				],
+				[
+					"PlatformIO",
+					"Test"
+				],
+				[
+					"PlatformIO",
+					"Upload using Programmer"
+				],
+				[
+					"PlatformIO",
+					"Upload SPIFFS image"
+				],
+				[
+					"PlatformIO",
+					"Update platforms and libraries"
+				],
+				[
+					"PlatformIO",
+					"Upgrade PlatformIO Core"
+				]
+			],
+			[
+				"PlatformIO",
+				"Build"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Build With: PlatformIO - Upload"
+			],
+			[
+				"pl",
+				"Build With: PlatformIO - Upload"
+			],
+			[
+				"plat",
+				"Build With: PlatformIO - Upload"
+			],
+			[
+				"Deviot: sh",
+				"Deviot: Show Deviot Console"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"to",
+				"View: Toggle Menu"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/kharlashkin/Develop/platformio",
+		"/home/kharlashkin/Develop/platformio/.pio",
+		"/home/kharlashkin/Develop/platformio/.pio/build",
+		"/home/kharlashkin/Develop/platformio/.pio/libdeps",
+		"/home/kharlashkin/Develop/platformio/.pio/libdeps/d1_mini",
+		"/home/kharlashkin/Develop/platformio/include",
+		"/home/kharlashkin/Develop/platformio/lib",
+		"/home/kharlashkin/Develop/platformio/src",
+		"/home/kharlashkin/Develop/platformio/test"
+	],
+	"file_history":
+	[
+		"/home/kharlashkin/Downloads/201. Import data to your sheet.crt",
+		"/home/kharlashkin/Downloads/100. Знакомство с лектором.crt",
+		"/home/kharlashkin/Downloads/100. Meet the instructor (1).crt",
+		"/home/kharlashkin/Downloads/200. Welcome to “Working with formulas and functions”.crt",
+		"/home/kharlashkin/Downloads/305. Test time - now it's your turn!.crt",
+		"/home/kharlashkin/Downloads/303. Enter objects in your spreadsheet.crt",
+		"/home/kharlashkin/Downloads/302. Highlight key data points in your spreadsheet.crt",
+		"/home/kharlashkin/Downloads/300. Welcome to “Telling stories with data”.crt",
+		"/home/kharlashkin/Downloads/407. Test time - now it's your turn!.crt",
+		"/home/kharlashkin/Downloads/405. Analyze your trends alongside Big Data patterns.crt",
+		"/home/kharlashkin/Downloads/404. Use the GOOGLETRANSLATE and GOOGLEFINANCE functions.crt",
+		"/home/kharlashkin/Downloads/403. Tell your story with your data.crt",
+		"/home/kharlashkin/Downloads/401. Dive deeper into your data.crt",
+		"/home/kharlashkin/Downloads/400. Welcome to “Supercharge your sheet”.crt",
+		"/home/kharlashkin/Downloads/509. Test time - now it's your turn!.crt",
+		"/home/kharlashkin/Downloads/506. Track changes and activity.crt",
+		"/home/kharlashkin/Downloads/504. Collaborate with your team.crt",
+		"/home/kharlashkin/Downloads/503. Troubleshoot error messages.crt",
+		"/home/kharlashkin/Downloads/502. Maintain control of your data.crt",
+		"/home/kharlashkin/Downloads/501. Share a spreadsheet.crt",
+		"/home/kharlashkin/Downloads/500. Welcome to “Collaborating in Sheets”.crt",
+		"/home/kharlashkin/Downloads/208. Test time - now it's your turn!.crt",
+		"/home/kharlashkin/Downloads/206. Use paste special in a spreadsheet.crt",
+		"/home/kharlashkin/Downloads/204. Use formulas & functions.crt",
+		"/home/kharlashkin/Downloads/00. Welcome to “Working with formulas and functions”.crt",
+		"/home/kharlashkin/Downloads/06. Test time - now it's your turn!.crt",
+		"/home/kharlashkin/Downloads/04. Use some basic keyboard shortcuts.crt",
+		"/home/kharlashkin/Downloads/03. Duplicate, print, or publish your spreadsheet.crt",
+		"/home/kharlashkin/Downloads/02. Edit your spreadsheet.crt",
+		"/home/kharlashkin/Downloads/01. Create a new spreadsheet.crt",
+		"/home/kharlashkin/Downloads/00. Meet the instructor.crt",
+		"/home/kharlashkin/Public/G_disk.bat",
+		"/home/kharlashkin/Public/ОКК-СМК.htm",
+		"/home/kharlashkin/Games/world-of-tanks/drive_c/Games/World_of_Tanks/python.log",
+		"/home/kharlashkin/Downloads/Asset1.csv",
+		"/home/kharlashkin/Downloads/Asset.csv",
+		"/home/kharlashkin/Develop/platformio/platformio.ini",
+		"/home/kharlashkin/Develop/platformio/src/Wire.h",
+		"/home/kharlashkin/Develop/platformio/platformio.sublime-project",
+		"/home/kharlashkin/Develop/mqtt/publish_single.py",
+		"/home/kharlashkin/Develop/barcode/test.py",
+		"/home/kharlashkin/Develop/mqtt/subscribe_simple.py",
+		"/home/kharlashkin/MPU-9250DMP/MPU-9250DMP/test.ino",
+		"/home/kharlashkin/Downloads/zaborona-help.ovpn",
+		"/home/kharlashkin/Templates/gostomel/ca.crt",
+		"/home/kharlashkin/Templates/gostomel/cert.crt",
+		"/home/kharlashkin/Templates/gostomel/key.key",
+		"/home/kharlashkin/Templates/gostomel/rc.local",
+		"/home/kharlashkin/Templates/gostomel/gostomel.ovpn",
+		"/home/kharlashkin/Documents/ekol.ovpn",
+		"/home/kharlashkin/Templates/Информация о заказе 18.10.2019-13.xls.js",
+		"/home/kharlashkin/Develop/Folium/test.py",
+		"/home/kharlashkin/Documents/best gostomel.txt"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"slee",
+			"setup_wifi"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/kharlashkin/Develop/mqtt/subscribe_simple.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1030,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								595,
+								595
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/kharlashkin/Develop/mqtt/calib.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								634,
+								634
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8603,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2753,
+								2753
+							]
+						],
+						"settings":
+						{
+							"auto_name": "int led = 13;",
+							"syntax": "Packages/Deviot-master/deviot.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1377.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/kharlashkin/Develop/mqtt/start.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								621,
+								621
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "platformio.ini",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1112,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								541,
+								541
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/MPU9250_9Axis_MotionApps41.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 48892,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4597,
+								4597
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Deviot-master/deviot.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12601.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/MPU9250.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 126954,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2800,
+								2800
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Deviot-master/deviot.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 36025.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/helper_3dmath.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								531,
+								531
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Deviot-master/deviot.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 140.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.969549330085,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.deviot":
+	{
+		"height": 120.0
+	},
+	"output.exec":
+	{
+		"height": 255.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "PlatformIO",
+	"project": "platformio.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 227.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
