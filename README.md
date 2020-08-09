@@ -26,7 +26,7 @@ r57zone (не участвовал в USGH) - разработчик C++, VR.
 * Виртуальная реальность (Virtual reality, VR).
 * Дополненная реальность (Augmented reality, AR).
 
-#Задачи на USGH
+# Задачи на USGH
 ![tasks](https://i.imgur.com/bdlccZM.png)
 
 * ~~Работы датчиков через глобальную сеть интернет.~~
