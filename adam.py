@@ -18,8 +18,9 @@ import paho.mqtt.publish as publish
 FPS = 24
 HOSTNAME = "176.37.6.176"
 PORT = 1883
+ROTATION_MODE = "QUATERNION"
 
-global data, msg_mqtt, client_obj
+global data, msg_mqtt
 
 
 # counter = 0
@@ -48,10 +49,26 @@ def on_message(client, userdata, msg):
 
 
 def _move_bone(armature_name, bone_name, quaternion):
+    rotation_mode_mapping = {
+        "QUATERNION": _move_bone_by_quaternion,
+        "EULER": _move_bone_by_euler,
+    }
     armature_obj = bpy.data.objects[armature_name]
     pose_bone = armature_obj.pose.bones[bone_name]
+    rot_method = rotation_mode_mapping.get(ROTATION_MODE)
+    if rot_method:
+        rot_method(pose_bone, quaternion)
+
+
+def _move_bone_by_quaternion(pose_bone, quaternion):
     pose_bone.rotation_quaternion = quaternion
     pose_bone.keyframe_insert(data_path="rotation_quaternion")
+
+
+def _move_bone_by_euler(pose_bone, quaternion):
+    euler = quaternion.to_euler(order="XYZ")
+    pose_bone.rotation_euler = euler
+    pose_bone.keyframe_insert(data_path="rotation_euler")
 
 
 def mqtt_data():
@@ -65,6 +82,7 @@ def mqtt_data():
 
     # if data and msg_mqtt:
     qw, qx, qy, qz = [float(s) for s in data]
+
     quaternion = mathutils.Quaternion((qw, qx, qy, qz))
     armature_name, bone_name = [s for s in msg_mqtt]
 
@@ -79,21 +97,19 @@ def mqtt_data():
 
 
 def mqtt_connect(context, hostname, port):
-    global client_obj
-
-    client_obj = mqtt.Client()
-
-    client_obj.connect(host=hostname, port=port, keepalive=60)
-    client_obj.on_connect = on_connect
-    client_obj.on_message = on_message
-    client_obj.loop_start()
+    client = context.scene.mqtt_client
+    client.connect(host=hostname, port=port, keepalive=60)
+    client.on_connect = on_connect
+    client.on_message = on_message
+    client.loop_start()
 
     # bpy.app.timers.register(mqtt_data)
 
 
 def mqtt_disconnect(context, hostname, port):
     # bpy.app.timers.unregister(mqtt_data)
-    client_obj.loop_stop()
+    client = context.scene.mqtt_client
+    client.loop_stop()
 
 
 def mqtt_start(context, hostname, port):
@@ -195,7 +211,7 @@ class MQTTPanel(bpy.types.Panel):
 
 
 def register():
-    # bpy.types.Scene.mqtt_client = bpy.props.PointerProperty(type=mqtt.Client)
+    bpy.types.Scene.mqtt_client = mqtt.Client()  # context.scene.mqtt_client
 
     bpy.utils.register_class(MQTTStartOp)
     bpy.utils.register_class(MQTTStopOp)
@@ -212,6 +228,7 @@ def unregister():
     bpy.utils.unregister_class(MQTTCalibOp)
     bpy.utils.unregister_class(MQTTConnectOp)
     bpy.utils.unregister_class(MQTTDisconnectOp)
+    del bpy.types.Scene.mqtt_client
 
 
 if __name__ == "__main__":
